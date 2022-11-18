@@ -1,0 +1,240 @@
+:root {
+}
+
+* {
+    color: #222;
+    font-family: GeneralSans;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+    border-style: none;
+}
+
+html {
+    --lh: 1.4rem;
+    line-height: var(--lh);
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "nav header header"
+        "nav main aside"
+        "nav footer footer";
+    
+    grid-template-columns: 1fr 5fr 2fr;
+    grid-template-rows: 9rem auto 3rem;
+}
+
+main {
+    grid-area: main;
+}
+
+nav {
+    font-weight: bold;
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.navigation > .general,
+.navigation >  .technical {
+    margin-left: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nav-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-icon,
+.search-icon,
+.notification-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    background-position: center center;
+    background-size: 1.5rem 1.5rem;
+}
+
+.nav-head {
+    font-size: large;
+    margin-top: 1rem;
+}
+
+.logo-icon {
+    background-image: url("./icons/gemini.png");
+
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    background-position: center center;
+    background-size: 2.5rem 2.5rem;
+}
+
+.home-icon {
+    background-image: url("./icons/nav/home.svg");
+}
+.profile-icon {
+    background-image: url("./icons/nav/profile.png");
+}
+.messages-icon {
+    background-image: url("./icons/nav/messages.png");
+}
+.history-icon {
+    background-image: url("./icons/nav/history.svg");
+}
+.tasks-icon {
+    background-image: url("./icons/nav/tasks.png");
+}
+.communities-icon {
+    background-image: url("./icons/nav/communities.png");
+}
+.settings-icon {
+    background-image: url("./icons/nav/settings.svg");
+}.support-icon {
+    background-image: url("./icons/nav/support.png");
+}
+.privacy-icon {
+    background-image: url("./icons/nav/privacy.png");
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0rem;
+    padding: 1rem;
+}
+
+.header-search {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.search-icon {
+    background-image: url("./icons/header/search.svg");
+}
+.searchbar {
+    border-radius: 1.5rem;
+    padding-left: 0.5rem;
+}
+
+.header-profile {
+    display: grid;
+    grid-template-columns: 1.5rem 3rem 5rem;
+    gap: 1rem;
+    justify-content: end;
+    align-items: center;
+}
+.notification-icon {
+    background-image: url("./icons/header/notification.png");
+}
+
+.header-greeting {
+    display: flex;
+}
+.header-utils {
+    display: flex;
+}
+
+
+.profile-pfp,
+.greeting-pfp {
+    background-image: url("./images/pfp.png");
+    background-color: transparent;
+    background-position: center center;
+}
+
+.profile-pfp {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background-size: 3rem 3rem;
+}
+
+.greeting-pfp {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    background-size: 5rem 5rem;
+    margin-right: 0.5rem;
+}
+
+.greeting-name {
+    margin-top: 0.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.header-utils {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.btn-new,
+.btn-share,
+.btn-upload {
+    border-radius: 1.5rem;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.neumorph,
+input {
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+main,
+aside {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--book-width), 1fr));
+    gap: 3rem;
+    padding: 2rem;
+}
+
+input {
+    width: 100%;
+    margin: 0px auto;
+}
+
+@media (max-width: 600px) {
+
+    .input-group {
+        grid-column: auto;
+    }
+}
