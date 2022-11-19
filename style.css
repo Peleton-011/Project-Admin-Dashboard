@@ -232,9 +232,53 @@ input {
     margin: 0px auto;
 }
 
-@media (max-width: 600px) {
+.card.project {
+    background-color: yellow;
+    border-radius: 0.5rem;
+}
 
-    .input-group {
-        grid-column: auto;
-    }
+.project-content {
+    background-color: white;
+    margin-left: 0.5rem;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.project-text {
+    text-align: left;
+}
+
+.project-utils {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.star,
+.watch,
+.fork {
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    background-position: center center;
+}
+
+.star.starred {
+    background-image: url("./icons/projects/star.png");
+}
+.star.not-starred {
+    background-image: url("./icons/projects/not-star.png");
+}
+
+.watch.watched {
+    background-image: url("./icons/projects/watch.png");
+}
+.watch.not-watched {
+    background-image: url("./icons/projects/not-watch.png");
+}
+
+.watch.fork {
+    background-image: url("./icons/projects/fork.png");
 }
